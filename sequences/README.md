@@ -17,31 +17,31 @@
     
     - `INCREMENT BY`:  
       > Gibt die Schrittweite an  
-      > Standardwert: 1 (auch negative Werte möglich)  
+      > ###### Standardwert: 1 (auch negative Werte möglich)  
     - `START WITH`:  
       > Definiert den Startwert der Sequenz  
-      > Standardwert:  *1 ⇾ aufsteigenden* Sequenzen    
-      > Standardwert: *-1 ⇾ absteigenden* Sequenzen     
+      > ###### Standardwert:  *1 ⇾ aufsteigenden* Sequenzen    
+      > ###### Standardwert: *-1 ⇾ absteigenden* Sequenzen     
     - `MINVALUE` / `MAXVALUE`:  
       > Legt die minimalen und maximalen Werte fest  
-      > - `NOMAXVALUE`:  
-      > Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]     
-      > - `NOMINVALUE`:  
-      > Mindestwert: *1 ⇾ aufsteigenden* Sequenzen   
-      > Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen       
+      - `NOMAXVALUE`:  
+        > Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]     
+      - `NOMINVALUE`:  
+        > ###### Mindestwert: *1 ⇾ aufsteigenden* Sequenzen   
+        > ###### Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen       
     - `CYCLE` / `NOCYCLE`:  
-      > - `CYCLE`:  
-      >  Neustart ⇾ wenn Höchstwert erreicht   
-      > - `NOCYCLE`:  
-      > Fehler ⇾ wenn Höchstwert erreicht   
+      - `CYCLE`:  
+        > ###### Neustart ⇾ wenn Höchstwert erreicht   
+      - `NOCYCLE`:  
+        > ###### Fehler ⇾ wenn Höchstwert erreicht   
     - `ORDER` / `NOORDER`:  
-      > `ORDER`:  
-      > garantiert die Reihenfolge, jedoch keine lückenlose Nummerierung   
-    - CACHE / NOCACHE:  
-      > CACHE:  
-      > ` Generiert und speichert mehrere Nummern im Voraus (Standard: 20) `  
-      > NOCACHE:  
-      > ` Erzeugt Nummern bei Bedarf ⇾ kann bei Systemfehlern sicherer sein `  
+      - `ORDER`:  
+        > ###### garantiert die Reihenfolge, jedoch keine lückenlose Nummerierung   
+    - `CACHE` / `NOCACHE`:  
+      - `CACHE`:  
+        > ###### Generiert und speichert mehrere Nummern im Voraus (Standard: 20)   
+      - `NOCACHE`:  
+        > ###### Erzeugt Nummern bei Bedarf ⇾ kann bei Systemfehlern sicherer sein   
 
   - ### Löschen:
     ```sql
