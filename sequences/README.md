@@ -13,6 +13,35 @@
         nocycle               -- : keine wiederholung   /  CYCLE -- : wiederholung der sequenz
     ;
     ```
+    #### Wichtige *Parameter* und *Optionen*
+    
+    - `INCREMENT BY`:  
+      > Gibt die Schrittweite an  
+      > Standardwert: 1 (auch negative Werte möglich)  
+    - `START WITH`:  
+      > Definiert den Startwert der Sequenz  
+      > Standardwert:  *1 ⇾ aufsteigenden* Sequenzen    
+      > Standardwert: *-1 ⇾ absteigenden* Sequenzen     
+    - `MINVALUE` / `MAXVALUE`:  
+      > Legt die minimalen und maximalen Werte fest  
+      > - `NOMAXVALUE`:  
+      > Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]     
+      > - `NOMINVALUE`:  
+      > Mindestwert: *1 ⇾ aufsteigenden* Sequenzen   
+      > Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen       
+    - `CYCLE` / `NOCYCLE`:  
+      > - `CYCLE`:  
+      >  Neustart ⇾ wenn Höchstwert erreicht   
+      > - `NOCYCLE`:  
+      > Fehler ⇾ wenn Höchstwert erreicht   
+    - `ORDER` / `NOORDER`:  
+      > `ORDER`:  
+      > garantiert die Reihenfolge, jedoch keine lückenlose Nummerierung   
+    - CACHE / NOCACHE:  
+      > CACHE:  
+      > ` Generiert und speichert mehrere Nummern im Voraus (Standard: 20) `  
+      > NOCACHE:  
+      > ` Erzeugt Nummern bei Bedarf ⇾ kann bei Systemfehlern sicherer sein `  
 
   - ### Löschen:
     ```sql
@@ -21,6 +50,7 @@
     ```
 
 > - ### Anwendung:
+>
 >   ```sql
 >   create TABLE
 >     ALLUSERS     -- : Tabellen-Name
@@ -30,6 +60,12 @@
 >       --named-constraints---------------------------------------------------------
 >       CONSTRAINT PK_allUsers PRIMARY KEY (u_ID)
 >     );
+>   ```
+>   
+> - #### Pseudospalten:
+>   ```sql
+>   seq_name.NEXTVAL: Nächster Wert der Sequenz.
+>   seq_name.CURRVAL: Aktueller Wert der Sequenz.
 >   ```
 
 ---
