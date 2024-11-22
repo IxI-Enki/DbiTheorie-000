@@ -139,9 +139,25 @@
 
   - ### **Blocking**
       - Prozesse warten auf die Freigabe gesperrter Ressourcen
-        > ##### *Beispiel*:
-        > Langes `SELECT` blockiert parallele `UPDATE`-Operationen
+        > *zB.* Langes `SELECT` blockiert parallele `UPDATE`-Operationen
 
+---
+> ### **Ⅳ** ) 
+> ### <p align="center"> ***Beispiele*** </p>
 
+> ##### *1* )
+  > ```sql
+  > LOCK TABLE emp IN SHARE MODE;
+  > INSERT INTO dept VALUES (99, 'NinetyNine', 'Earth');
+  > DELETE FROM dept WHERE deptno = 99;
+  > SELECT * FROM dept;
+  > ```
 
+> ##### *2* )
+  > ```sql
+  > ALTER SESSION SET ISOLATION_LEVEL=SERIALIZABLE;
+  > INSERT INTO a SELECT COUNT(*) FROM b;
+  > SELECT * FROM a;
+  > ```
 
+---
