@@ -1,5 +1,23 @@
 ###### <div align="center"> Transaktionen, Isolationslevel & Sperrmechanismen </div>
 
+ 
+> [!WARNING]
+> <details>  
+>  <summary align="center">  ➡️ 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 🆓 </summary>  
+>  
+> ![ACID](./img/tran_q01.png)
+> ![auto--manual-TX](./img/tran_q02.png)
+> ![anomalies](./img/tran_q03.png)
+> ![read-committed--serializeable](./img/tran_q04.png)
+> ![pessi--opti-locking](./img/tran_q05.png)
+> ![lock-modes](./img/tran_q06.png)
+> ![deadlock](./img/tran_q07.png)
+> ![locking--blocking](./img/tran_q08.png)
+> ![serializable](./img/tran_q09.png)
+>
+> </details>
+ 
+
 <!-- TRANSAKTIONEN -->
 
 # **Ⅰ** ) ***Transaktionen***  
@@ -15,6 +33,7 @@
   | I | **Isolation**:   | *Transaktionen beeinflussen sich nicht gegenseitig* |
   | D | **Durability**:  | *Änderungen sind nach Commit dauerhaft*             |
 </div>    
+
 
 --- 
 <div align="left">
@@ -160,19 +179,3 @@
   > SELECT * FROM a;
   > ```
 ---
-
-> [!WARNING]
-> <details>  
->  <summary> 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 </summary>  
->  
-> ![ACID](./img/tran_q01.png)
-> ![auto--manual-TX](./img/tran_q02.png)
-> ![anomalies](./img/tran_q03.png)
-> ![read-committed--serializeable](./img/tran_q04.png)
-> ![pessi--opti-locking](./img/tran_q05.png)
-> ![lock-modes](./img/tran_q06.png)
-> ![deadlock](./img/tran_q07.png)
-> ![locking--blocking](./img/tran_q08.png)
-> ![serializable](./img/tran_q09.png)
->
-> </details>
