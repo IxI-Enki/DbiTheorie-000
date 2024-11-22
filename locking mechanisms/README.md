@@ -32,9 +32,7 @@
 </div>    
 
 ---
-
 ## **Ⅰ** ***a*** ) *Einführung* in ***TX***
-
   - ### **Multi-User-Datenbanken**:  
     Ermöglichen gleichzeitigen Zugriff durch mehrere Benutzer
     - **Lesen** ist *konfliktfrei*
@@ -44,6 +42,7 @@
     - Sicherstellen von Konsistenz, auch bei parallelen Zugriffen
     - Effizientes Schreiben und Lesen ohne Blockierungen
 
+--- 
 ## **Ⅰ** ***b*** ) *Herausforderungen* von ***TX***
   - ### **Mehrere Operationen**:
       *Transaktionen gewährleisten, dass mehrerer Operationen* **vollständig ausgeführt** *werden* ***oder*** **keine**
@@ -53,9 +52,7 @@
       **Gleichzeitiges Lesen** ***und*** **Schreiben** *ermöglichen*
 
 ---
-
 ## **Ⅰ** ***c*** ) *Transaktionssteuerung* in **SQL**
-
   - ### **Automatische Transaktionen**:
     - ***Standardverhalten***: *Jedes SQL-Statement* (`UPDATE`, `INSERT`, `DELETE`) *wird als Transaktion behandelt*
     - ***Fehler*** führen zu einem **automatischen Rollback**
@@ -64,20 +61,18 @@
     - Steuerung mit `BEGIN TRANSACTION`, `COMMIT` und `ROLLBACK`
 
 ---
-
 ## **Ⅰ** ***d*** ) *Typische* ***Probleme*** *bei* ***TX***
-
   1) - **Lost Update**  
-       > Zwei Transaktionen überschreiben sich gegenseitig  
-         **Lösung**: ***Sperren*** *oder* ***Versionierung***
+       Zwei Transaktionen überschreiben sich gegenseitig  
+       > **Lösung**: ***Sperren*** *oder* ***Versionierung***
   2) - **Dirty Read**  
-       > Lesen von uncommitted Daten einer anderen Transaktion  
-         **Lösung**: *Verwendung strengerer* ***Isolationslevel*** (zB. `READ COMMITTED`)
+       Lesen von uncommitted Daten einer anderen Transaktion  
+       > **Lösung**: *Verwendung strengerer* ***Isolationslevel*** (zB. `READ COMMITTED`)
   3) - **Non-Repeatable Read**  
-       > Wiederholtes Lesen derselben Daten liefert unterschiedliche Ergebnisse  
-         **Lösung**: ***Repeatable Read*** *oder* ***Serializable Isolation***
+       Wiederholtes Lesen derselben Daten liefert unterschiedliche Ergebnisse  
+       > **Lösung**: ***Repeatable Read*** *oder* ***Serializable Isolation***
   4) - **Phantom Read**  
-       > Neue Datensätze erscheinen während einer Abfrage  
-         **Lösung**: ***Serializable Isolation***
+       Neue Datensätze erscheinen während einer Abfrage  
+       > **Lösung**: ***Serializable Isolation***
 
 
