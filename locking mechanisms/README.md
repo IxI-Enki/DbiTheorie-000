@@ -75,4 +75,27 @@
        Neue Datensätze erscheinen während einer Abfrage  
        > **Lösung**: ***`SERIALIZABLE` Isolation***
 
+---
+## **Ⅰ** ***e*** ) ***Isolationslevel***
+**Oracle-Standard**
+  - Oracle verwendet `READ COMMITTED` als **Standard-Isolationslevel**
+  - Anpassung mit `ALTER SESSION SET ISOLATION_LEVEL`
+
+### Vergleich der Isolationslevel
+
+|   IsolationsLevel   | **Dirty Read** | **Non-Repeatable Read** | **Phantom Read** |
+|:-------------------:|:--------------:|:-----------------------:|:----------------:|
+|`READ UNCOMMITTED`   |       Ja       |              Ja         |         Ja       |
+| `READ COMMITTED`    |     Nein       |              Ja         |         Ja       |
+| ~`REPEATABLE READ`~ |     Nein       |            Nein         |         Ja       |
+|    `SERIALIZABLE`   |     Nein       |            Nein         |       Nein       |
+
+
+
+
+
+
+
+
+
 
