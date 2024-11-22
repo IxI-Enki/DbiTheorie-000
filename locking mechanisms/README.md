@@ -3,7 +3,7 @@
  
 > [!WARNING]
 > <details>  
->  <summary align="center">  ➡️ 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 🆓 </summary>  
+>  <summary align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 🖱️<sup><sub>click</sub></sup> </summary>  
 >  
 > ![ACID](./img/tran_q01.png)
 > ![auto--manual-TX](./img/tran_q02.png)
