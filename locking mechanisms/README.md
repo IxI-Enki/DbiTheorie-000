@@ -1,5 +1,4 @@
 ###### <div align="center"> Transaktionen, Isolationslevel & Sperrmechanismen </div>
-
  
 > [!WARNING]
 > <details>  
@@ -16,7 +15,6 @@
 > ![serializable](./img/tran_q09.png)
 >
 > </details>
- 
 
 <!-- TRANSAKTIONEN -->
 
