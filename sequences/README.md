@@ -1,6 +1,6 @@
 <!-- SEQUENCES ERSTELLUNG -->
 
-## 1.) Sequenz
+## 1.) Sequenzen
   - ### Erstellen:
     ```sql
     create SEQUENCE                
@@ -31,3 +31,13 @@
 >       CONSTRAINT PK_allUsers PRIMARY KEY (u_ID)
 >     );
 >   ```
+
+---
+
+> [!TIP]
+> Beispiel-Fragen
+> ![sequenzen-erstellen](./img/seg_q01.png)
+> ![nextval-currval](./img/seg_q02.png)
+> ![cache-option](./img/seg_q03.png)
+> ![nocycle-hit-end](./img/seg_q04.png) 
+> ![workaround](./img/seg_q05.png) 
