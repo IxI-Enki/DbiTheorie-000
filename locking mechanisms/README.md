@@ -178,8 +178,8 @@
   > ```
 
 > ##### *3* )
-  > In der Praxis die Einführung einer Versionsspalte verbreitet durchgesetzt
-  >  Diese muss bei ***JEDEM Update*** an *allen Stellen im Programmcode* ***inkrementiert*** werden (*erfolgt meistens durch Framework*) 
+  > - *In der Praxis die Einführung einer Versionsspalte verbreitet durchgesetzt*  
+  >   Diese muss bei ***JEDEM Update*** an *allen Stellen im Programmcode* ***inkrementiert*** werden (*meistens durch Framework*) 
   > ```sql
   > ALTER TABLE emp
   >   ADD vers NUMBER DEFAULT 0;  -- hinzufügen der versionsspalte
