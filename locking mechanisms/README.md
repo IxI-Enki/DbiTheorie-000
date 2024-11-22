@@ -108,7 +108,7 @@
   - **Nachteile**: *Kann* ***Deadlocks*** *verursachen, blockiert parallelen Zugriff*
     > *Beispiel*: `UPDATE`-Operationen sperren betroffene Datensätze
 
-## **Ⅲ** ***a*** ) ***Optimistischer*** *Ansatz* (**Versionierung**)
+## **Ⅲ** ***b*** ) ***Optimistischer*** *Ansatz* (**Versionierung**)
 ##### Definition:
 > <p align="center"> Geht davon aus, dass Konflikte selten sind, (und nutzt Snapshots)</p>
 
@@ -117,7 +117,7 @@
     > *Beispiel*: Zwei Benutzer bearbeiten denselben Datensatz unabhängig voneinander
 
 ---
-## **Ⅲ** ***b*** ) ***Sperrmechanismen*** (**Locks**)
+## **Ⅲ** ***c*** ) ***Sperrmechanismen*** (**Locks**)
 **Typen von Sperren**:
   1) - `ROW SHARE MODE`: *Erlaubt gleichzeitigen Zugriff, blockiert exklusive Sperren*
   2) - `ROW EXCLUSIVE MODE`: *Verhindert parallele Schreiboperationen*
@@ -125,6 +125,22 @@
   4) - `SHARE ROW EXCLUSIVE MODE`: *Verhindert gleichzeitige Schreibsperren*
   5) - `EXCLUSIVE MODE`: *Verhindert jeglichen Zugriff durch andere Benutzer*
 
+##### *Beispiel*:
+  > ```sql
+  > LOCK TABLE dept IN ROW SHARE MODE; 
+  > LOCK TABLE dept IN EXCLUSIVE MODE;
+  > ```
+
+---
+## **Ⅲ** ***d*** ) ***Deadlocks und Blockierungen***
+  - ### **Deadlocks**
+      - Tritt auf, wenn zwei Transaktionen gegenseitig auf Ressourcen warten
+        > **Lösung**: *Rollback einer der Transaktionen durch das DBMS*
+
+  - ### **Blocking**
+      - Prozesse warten auf die Freigabe gesperrter Ressourcen
+        > ##### *Beispiel*:
+        > Langes `SELECT` blockiert parallele `UPDATE`-Operationen
 
 
 
