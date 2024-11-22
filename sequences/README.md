@@ -9,7 +9,7 @@
         MAXvalue 100000       -- : maxwert
         MINvalue 0            -- : minwert
         INCREMENT by 1        -- : stepsize           
-        noCACHE               -- : Erzeugt Nummern bei Bedarf  
+        noCACHE               -- : erzeugt nummern bei bedarf  
         noCYCLE               -- : keine wiederholung
     ;
     ```
