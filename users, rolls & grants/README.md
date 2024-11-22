@@ -10,10 +10,8 @@
 
 <!-- BENUTZER  -->
 
-# **Ⅰ** ) ***Benutzer***
-<div align="center"> 
-
-</div>
+# **Ⅰ** ) 
+# <p align="center"> ***Benutzer*** </p>
 
 ## **Ⅰ** ***a*** ) *Erstellen*:
 ```sql
@@ -31,13 +29,14 @@
 
 ---
 <!-- ROLLEN -->
-# **Ⅱ** ) ***Rollen*** 
+# **Ⅱ** )
+# <p align="center"> ***Rollen*** </p>
 ## **Ⅱ** ***a*** ) *Erstellen*:
 ```sql
   create ROLE                 -- CREATE statement  
       specialRole;            -- Rollen-Name: "specialRole"
 ```
-## **Ⅰ** ***b*** ) *Löschen*:
+## **Ⅱ** ***b*** ) *Löschen*:
 ```sql
   drop ROLE                   -- DROP statement
       specialRole;            -- Rollen-Name: "specialRole"
@@ -48,7 +47,8 @@
 </div>
 
 ---
-# **Ⅲ** )  ***Rechte*** 
+# **Ⅲ** )  
+# <p align="center"> ***Rechte*** </p> 
 ## **Ⅲ** ***a*** ) ***System***-*Privilegien vergeben*:
 ```sql
   grant 
