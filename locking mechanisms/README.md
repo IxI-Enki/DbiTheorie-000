@@ -176,4 +176,19 @@
   > INSERT INTO a SELECT COUNT(*) FROM b;
   > SELECT * FROM a;
   > ```
+
+> ##### *3* )
+  > In der Praxis die Einführung einer Versionsspalte verbreitet durchgesetzt
+  >  Diese muss bei ***JEDEM Update*** an *allen Stellen im Programmcode* ***inkrementiert*** werden (*erfolgt meistens durch Framework*) 
+  > ```sql
+  > ALTER TABLE emp
+  >   ADD vers NUMBER DEFAULT 0;  -- hinzufügen der versionsspalte
+  >
+  > UPDATE system.emp
+  >   SET
+  >     sal=1300,
+  >     vers=vers+1               -- inkrementieren der versionsspalte
+  >   WHERE empno=7369
+  >    and vers=0;                -- versionsnummer wird hier abgeglichen
+  > ```   
 ---
