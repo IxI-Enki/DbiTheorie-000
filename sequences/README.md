@@ -8,7 +8,7 @@
         start with 1          -- : startwert
         maxvalue 100000       -- : maxwert
         minvalue 0            -- : minwert
-        increment by 1        -- : stepsize
+        increment by 1        -- : stepsize             /  DECREMENT
         nocache               -- :                      /  CACHE -- : 
         nocycle               -- : keine wiederholung   /  CYCLE -- : wiederholung der sequenz
     ;
