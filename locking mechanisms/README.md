@@ -70,9 +70,9 @@
        > **Lösung**: *Verwendung strengerer* ***Isolationslevel*** (zB. `READ COMMITTED`)
   3) - **Non-Repeatable Read**  
        Wiederholtes Lesen derselben Daten liefert unterschiedliche Ergebnisse  
-       > **Lösung**: ***Repeatable Read*** *oder* ***Serializable Isolation***
+       > **Lösung**: ***`SERIALIZABLE` Isolation*** ( ..~`REPEATABLE READ`~ **NICHT in OracleSQL**.. ) 
   4) - **Phantom Read**  
        Neue Datensätze erscheinen während einer Abfrage  
-       > **Lösung**: ***Serializable Isolation***
+       > **Lösung**: ***`SERIALIZABLE` Isolation***
 
 
