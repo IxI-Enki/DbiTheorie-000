@@ -69,15 +69,15 @@
 
   1) - **Lost Update**  
        > Zwei Transaktionen überschreiben sich gegenseitig  
-       - **Lösung**: ***Sperren*** *oder* ***Versionierung***
+         **Lösung**: ***Sperren*** *oder* ***Versionierung***
   2) - **Dirty Read**  
        > Lesen von uncommitted Daten einer anderen Transaktion  
-       - **Lösung**: *Verwendung strengerer* ***Isolationslevel*** (zB. `READ COMMITTED`)
+         **Lösung**: *Verwendung strengerer* ***Isolationslevel*** (zB. `READ COMMITTED`)
   3) - **Non-Repeatable Read**  
        > Wiederholtes Lesen derselben Daten liefert unterschiedliche Ergebnisse  
-       - **Lösung**: ***Repeatable Read*** *oder* ***Serializable Isolation***
+         **Lösung**: ***Repeatable Read*** *oder* ***Serializable Isolation***
   4) - **Phantom Read**  
        > Neue Datensätze erscheinen während einer Abfrage  
-       - **Lösung**: ***Serializable Isolation***
+         **Lösung**: ***Serializable Isolation***
 
 
