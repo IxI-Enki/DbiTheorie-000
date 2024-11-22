@@ -5,49 +5,54 @@
     ```sql
     create SEQUENCE                
       allusers__u_ID        -- : name der sequenz
-        start with 1          -- : startwert
-        maxvalue 100000       -- : maxwert
-        minvalue 0            -- : minwert
-        increment by 1        -- : stepsize             /  DECREMENT
-        nocache               -- :                      /  CACHE -- : 
-        nocycle               -- : keine wiederholung   /  CYCLE -- : wiederholung der sequenz
+        START with 1          -- : startwert
+        MAXvalue 100000       -- : maxwert
+        MINvalue 0            -- : minwert
+        INCREMENT by 1        -- : stepsize           
+        noCACHE               -- : Erzeugt Nummern bei Bedarf  
+        noCYCLE               -- : keine wiederholung
     ;
     ```
-    #### Wichtige *Parameter* und *Optionen*
     
-    - `INCREMENT BY`:  
-       Gibt die Schrittweite an  
-      > ###### Standardwert: 1 (auch negative Werte möglich)  
-    - `START WITH`:  
-       Definiert den Startwert der Sequenz  
-      > ###### Standardwert:  *1 ⇾ aufsteigenden* Sequenzen    
-      > ###### Standardwert: *-1 ⇾ absteigenden* Sequenzen     
-    - `MINVALUE` / `MAXVALUE`:  
-       Legt die minimalen und maximalen Werte fest  
-      - `NOMAXVALUE`:  
-         Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]     
-      - `NOMINVALUE`:  
-         > ###### Mindestwert: *1 ⇾ aufsteigenden* Sequenzen   
-         > ###### Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen       
-    - `CYCLE` / `NOCYCLE`:  
-      - `CYCLE`:  
-         > ###### Neustart ⇾ wenn Höchstwert erreicht   
-      - `NOCYCLE`:  
-         > ###### Fehler ⇾ wenn Höchstwert erreicht   
-    - `ORDER` / `NOORDER`:  
-      - `ORDER`:  
-         > ###### garantiert die Reihenfolge, jedoch keine lückenlose Nummerierung   
-    - `CACHE` / `NOCACHE`:  
-      - `CACHE`:  
-        > ###### Generiert und speichert mehrere Nummern im Voraus (Standard: 20)   
-      - `NOCACHE`:  
-        > ###### Erzeugt Nummern bei Bedarf ⇾ kann bei Systemfehlern sicherer sein   
-
   - ### Löschen:
     ```sql
     drop SEQUENCE
       allusers__u_ID;
     ```
+    
+    ---
+     
+    #### Wichtige *Parameter* und *Optionen*
+    
+    - `INCREMENT by`:  
+       Gibt die Schrittweite an  
+       > Standardwert: 1 (auch negative Werte möglich)  
+    - `START with`:  
+       Definiert den Startwert der Sequenz  
+       > Standardwert:  *1 ⇾ aufsteigenden* Sequenzen    
+       > Standardwert: *-1 ⇾ absteigenden* Sequenzen     
+    - `MINvalue / MAXvalue`:  
+       Legt die minimalen und maximalen Werte fest  
+      - `noMAXvalue`:  
+         > Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]     
+      - `noMINvalue`:  
+         > Mindestwert: *1 ⇾ aufsteigenden* Sequenzen   
+         > Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen       
+    - `CYCLE / noCYCLE`:  
+      - `CYCLE`:  
+         > Neustart ⇾ wenn Höchstwert erreicht   
+      - `noCYCLE`:  
+         > Fehler ⇾ wenn Höchstwert erreicht   
+    - `ORDER / noORDER`:  
+      - `ORDER`:  
+         > garantiert die Reihenfolge, jedoch keine lückenlose Nummerierung   
+    - `CACHE / noCACHE`:  
+      - `CACHE`:  
+         > Generiert und speichert mehrere Nummern im Voraus (Standard: 20)   
+      - `noCACHE`:  
+         > Erzeugt Nummern bei Bedarf ⇾ kann bei Systemfehlern sicherer sein   
+
+---
 
 > - ### Anwendung:
 >
