@@ -1,7 +1,7 @@
 # DbiTheorie -- Sammlung des Theorie-Stoffs
 
 - [Benutzer, Rollen und Rechte](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/users%2C%20rolls%20%26%20grants/README.md)
-- [Sequenzen - generierte Folgen]()
+- [Sequenzen - generierte Folgen](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/sequences/README.md)
 - [Locking - Transactionen und Nebenläufigkeiten]()
 - [Laufzeitkomplexität]()
 - [Indizes]()
