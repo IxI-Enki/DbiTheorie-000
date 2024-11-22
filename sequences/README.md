@@ -22,9 +22,9 @@
 
 > - ### Anwendung:
 >   ```sql
->   create
->     TABLE ALLUSERS   -- :  Tabellen-Name
->     ( --columns  datatypes    default-values                   unnamed-constraints
+>   create TABLE
+>     ALLUSERS     -- : Tabellen-Name
+>     ( --columns--datatypes----default-values-------------------unnamed-constraints
 >        u_ID      NUMBER       DEFAULT allusers__u_ID.nextval,
 >        u_Name    VARCHAR(30)                                   NOT NULL,
 >       --named-constraints---------------------------------------------------------
