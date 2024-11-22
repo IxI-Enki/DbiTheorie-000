@@ -75,13 +75,17 @@
        Neue Datensätze erscheinen während einer Abfrage  
        > **Lösung**: ***`SERIALIZABLE` Isolation***
 
----
-## **Ⅰ** ***e*** ) ***Isolationslevel***
+------------------------------------------------------------------------------------------------------------------------
+<!-- ISOLATIONSLEVEL -->
+
+# **Ⅱ** ) ***Isolationslevel***
+
 **Oracle-Standard**
   - Oracle verwendet `READ COMMITTED` als **Standard-Isolationslevel**
   - Anpassung mit `ALTER SESSION SET ISOLATION_LEVEL`
 
 ### Vergleich der Isolationslevel
+<div align="center"> 
 
 |   IsolationsLevel   | **Dirty Read** | **Non-Repeatable Read** | **Phantom Read** |
 |:-------------------:|:--------------:|:-----------------------:|:----------------:|
@@ -89,11 +93,37 @@
 | `READ COMMITTED`    |     Nein       |              Ja         |         Ja       |
 | ~`REPEATABLE READ`~ |     Nein       |            Nein         |         Ja       |
 |    `SERIALIZABLE`   |     Nein       |            Nein         |       Nein       |
+</div>
 
+------------------------------------------------------------------------------------------------------------------------
+<!-- SPERRMECHANISMEN -->
 
+# **Ⅲ** )  ***Optimistische*** **vs.** ***Pessimistische Ansätze***
 
+## **Ⅲ** ***a*** ) ***Pessimistischer*** *Ansatz* (**Locking**)
+##### Definition:
+> <p align="center"> Sperrt Daten, um Konflikte zu verhindern </p>
 
+  - **Vorteile**: *Vermeidet Konflikte vollständig*
+  - **Nachteile**: *Kann* ***Deadlocks*** *verursachen, blockiert parallelen Zugriff*
+    > *Beispiel*: `UPDATE`-Operationen sperren betroffene Datensätze
 
+## **Ⅲ** ***a*** ) ***Optimistischer*** *Ansatz* (**Versionierung**)
+##### Definition:
+> <p align="center"> Geht davon aus, dass Konflikte selten sind, (und nutzt Snapshots)</p>
+
+  - **Vorteile**: *Bessere Parallelität*
+  - **Nachteile**: *Konflikte werden erst beim* `COMMIT` *erkannt, was zu* ***Rollbacks*** *führen kann*
+    > *Beispiel*: Zwei Benutzer bearbeiten denselben Datensatz unabhängig voneinander
+
+---
+## **Ⅲ** ***b*** ) ***Sperrmechanismen*** (**Locks**)
+**Typen von Sperren**:
+  1) - `ROW SHARE MODE`: *Erlaubt gleichzeitigen Zugriff, blockiert exklusive Sperren*
+  2) - `ROW EXCLUSIVE MODE`: *Verhindert parallele Schreiboperationen*
+  3) - `SHARE MODE`: *Nur Lesezugriffe erlaubt*
+  4) - `SHARE ROW EXCLUSIVE MODE`: *Verhindert gleichzeitige Schreibsperren*
+  5) - `EXCLUSIVE MODE`: *Verhindert jeglichen Zugriff durch andere Benutzer*
 
 
 
