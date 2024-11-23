@@ -34,8 +34,12 @@
 
 ---
 # **Ⅱ** ) *Beispiele* von Laufzeitkomplexitäten
-   - ## <div color="#00AA49">𝒪<sub>(1)</sub> : </div> 
-       ***konstante Zeit/Komplexität***: die Laufzeit hängt nicht von der Datenmenge ab
+   - ## <p color="#00AA49">𝒪<sub>(1)</sub> : </p>
+        <div color="#00AA49">
+           
+        ***konstante Zeit/Komplexität :***  *die Laufzeit hängt nicht von der Datenmenge ab* 
+        </div>
+        
        - ***Beispiel 1***:
          > Eine Abfrage, die nur die erste Zeile einer Tabelle ausgibt
          > ```sql
@@ -47,8 +51,12 @@
          > SELECT COUNT(*) FROM customers;
          > ```
 
-   - ## <div color="#00A217">𝒪<sub>(n)</sub> : </div> 
-       ***lineare Komplexität***: die Laufzeit ist propertional zur Datenmenge
+   - ## <p color="#00A217">𝒪<sub>(n)</sub> : </p>
+        <div color="#00A217">
+           
+        ***lineare Komplexität***: die Laufzeit ist propertional zur Datenmenge
+        </div>
+       
        - ***Beispiel 1***:
          > Eine Abfrage, die jede Zeile einer Tabelle durchläuft
          > ```sql
@@ -60,8 +68,12 @@
          > SELECT SUM(amount) FROM orders;
          > ```
 
-   - ## <div color="#DFDD00">𝒪<sub>(n²)</sub> : </div>
-       ***quadratische Komplexität***: die Laufzeit wächst quadratisch mit der Datenmenge
+   - ## <p color="#DFDD00">𝒪<sub>(n²)</sub> : </p>
+        <div color="#DFDD00">
+           
+        ***quadratische Komplexität***: die Laufzeit wächst quadratisch mit der Datenmenge
+        </div>
+ 
        - ***Beispiel 1***:
          > Verschachtelte Schleifen (vereinfacht, in der Praxis oft ineffizient)
          > ```sql
@@ -74,8 +86,12 @@
          > SELECT * FROM products, colors;
          > ```    	
      
-   - ## <div color="#01EE33">𝒪<sub>(log n)</sub> : </div>
-       ***logarithmische Komplexität***: die Laufzeit wächst logarithmisch mit der Datenmenge
+   - ## <p color="#01EE33">𝒪<sub>(log n)</sub> : </p>
+        <div color="#01EE33">
+
+        ***logarithmische Komplexität***: die Laufzeit wächst logarithmisch mit der Datenmenge
+        </div>
+       
        - ***Beispiel***:
          > Binäre Suche auf einem sortierten Index (vereinfacht)
          > ```sql
@@ -86,21 +102,33 @@
          > FETCH FIRST 1 ROW ONLY;
          > ```
          
-   - ## <div color="#AAFF00">𝒪<sub>(n log n)</sub> : </div>
-       ***superlineare Komplexität***: *liegt zwischen 𝒪(n) und 𝒪(n²)* 
+   - ## <p color="#AAFF00">𝒪<sub>(n log n)</sub> : </p>
+       <div color="#AAFF00">
+          
+       ***superlineare Komplexität***: *liegt zwischen 𝒪(n) und 𝒪(n²)*
+       </div>
+       
        - ***Beispiel***:
          > Optimierte Sortieralgorithmen wie Quicksort
          > ```sql
          > SELECT * FROM customers ORDER BY last_name;
          > ```
 
-   - ## <div color="#EE4400">𝒪<sub>(2ⁿ)</sub> : </div>
+   - ## <p color="#EE4400">𝒪<sub>(2ⁿ)</sub> : </p>
+        <div color="#EE4400">
+       
        ***exponentielle Komplexität***: die Laufzeit verdoppelt sich, wenn die Datenmenge um eine Einheit größer wird
+        </div>
+        
        - *Beispiel*:
          > Bilden aller Paare einer Menge, Türme von Hanoi als rekursiver Algorithmus
  
-   - ## <div color="#990000">𝒪<sub>(n!)</sub> : </div>
+   - ## <p color="#990000">𝒪<sub>(n!)</sub> : </p>
+        <div color="#990000">
+   
        ***faktorielle Komplexität***: die Laufzeit wächst mit der Fakultät der Datenmenge
+        </div> 
+     
        - *Beispiel*:
          > Problem des Handlungsreisenden 
 
