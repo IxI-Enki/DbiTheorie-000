@@ -51,18 +51,18 @@
        > Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen
     - ![no-max](https://img.shields.io/badge/noMAXvalue-%23fff?labelColor=%23500&color=%23200) :  
        > Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]            
-  - `CYCLE / noCYCLE`:  
-    - `CYCLE`:  
+  - ![cycle-nocycle](https://img.shields.io/badge/CYCLE-noCYCLE-%23fff?labelColor=%23050&color=%23302) :  
+    - ![cycle](https://img.shields.io/badge/CYCLE-%23fff?color=%23050) :  
        > Neustart ⇾ wenn Höchstwert erreicht   
-    - `noCYCLE`:  
+    - ![noCYCLE](https://img.shields.io/badge/noCYCLE-%23fff?labelColor=%23201&color=%23302) :  
        > Fehler ⇾ wenn Höchstwert erreicht   
-  - `ORDER / noORDER`:  
-    - `ORDER`:  
+  - ![ORDER / noORDER](https://img.shields.io/badge/ORDER-noORDER-%23fff?labelColor=%23FFF&color=%23111) :  
+    - ![ORDER](https://img.shields.io/badge/ORDER-%23fff?color=%23FFF) :  
        > garantiert die Reihenfolge, jedoch keine lückenlose Nummerierung   
-  - `CACHE / noCACHE`:  
-    - `CACHE`:  
+  - ![CACHE / noCACHE](https://img.shields.io/badge/CACHE-noCACHE-%23fff?labelColor=%237D0&color=%23D01) :  
+    - ![CACHE](https://img.shields.io/badge/CACHE-%23fff?color=%237D0) :  
        > Generiert und speichert mehrere Nummern im Voraus (Standard: 20)   
-     - `noCACHE`:  
+     - ![no-cache](https://img.shields.io/badge/noCACHE-%23fff?labelColor=%23a01&color=%23D02) :  
        > Erzeugt Nummern bei Bedarf ⇾ kann bei Systemfehlern sicherer sein   
 
 ---
