@@ -34,7 +34,7 @@
 
 ---
 # **Ⅱ** ) *Beispiele* von Laufzeitkomplexitäten
-   - ## 𝒪<sub>(1)</sub> :
+   - ## <div color="#00AA49">𝒪<sub>(1)</sub> : </div> 
        ***konstante Zeit/Komplexität***: die Laufzeit hängt nicht von der Datenmenge ab
        - ***Beispiel 1***:
          > Eine Abfrage, die nur die erste Zeile einer Tabelle ausgibt
@@ -47,7 +47,7 @@
          > SELECT COUNT(*) FROM customers;
          > ```
 
-   - ## 𝒪<sub>(n)</sub> :
+   - ## <div color="#00A217">𝒪<sub>(n)</sub> : </div> 
        ***lineare Komplexität***: die Laufzeit ist propertional zur Datenmenge
        - ***Beispiel 1***:
          > Eine Abfrage, die jede Zeile einer Tabelle durchläuft
@@ -60,7 +60,7 @@
          > SELECT SUM(amount) FROM orders;
          > ```
 
-   - ## 𝒪<sub>(n²)</sub> :
+   - ## <div color="#DFDD00">𝒪<sub>(n²)</sub> : </div>
        ***quadratische Komplexität***: die Laufzeit wächst quadratisch mit der Datenmenge
        - ***Beispiel 1***:
          > Verschachtelte Schleifen (vereinfacht, in der Praxis oft ineffizient)
@@ -74,7 +74,7 @@
          > SELECT * FROM products, colors;
          > ```    	
      
-   - ## 𝒪<sub>(log n)</sub> :
+   - ## <div color="#01EE33">𝒪<sub>(log n)</sub> : </div>
        ***logarithmische Komplexität***: die Laufzeit wächst logarithmisch mit der Datenmenge
        - ***Beispiel***:
          > Binäre Suche auf einem sortierten Index (vereinfacht)
@@ -86,7 +86,7 @@
          > FETCH FIRST 1 ROW ONLY;
          > ```
          
-   - ## 𝒪<sub>(n log n)</sub> :
+   - ## <div color="#AAFF00">𝒪<sub>(n log n)</sub> : </div>
        ***superlineare Komplexität***: *liegt zwischen 𝒪(n) und 𝒪(n²)* 
        - ***Beispiel***:
          > Optimierte Sortieralgorithmen wie Quicksort
@@ -94,12 +94,12 @@
          > SELECT * FROM customers ORDER BY last_name;
          > ```
 
-   - ## 𝒪<sub>(2ⁿ)</sub> :
+   - ## <div color="#EE4400">𝒪<sub>(2ⁿ)</sub> : </div>
        ***exponentielle Komplexität***: die Laufzeit verdoppelt sich, wenn die Datenmenge um eine Einheit größer wird
        - *Beispiel*:
          > Bilden aller Paare einer Menge, Türme von Hanoi als rekursiver Algorithmus
  
-   - ## 𝒪<sub>(n!)</sub> :
+   - ## <div color="#990000">𝒪<sub>(n!)</sub> : </div>
        ***faktorielle Komplexität***: die Laufzeit wächst mit der Fakultät der Datenmenge
        - *Beispiel*:
          > Problem des Handlungsreisenden 
