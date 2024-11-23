@@ -2,7 +2,7 @@
  
 > [!WARNING]
 > <details>  
->  <summary align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 🖱️<sup><sub>click</sub></sup> </summary>  
+>  <summary align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 🖱️<sup><sub color="red">click</sub></sup> </summary>  
 >
 > ![1](./img/idx_q01.png)
 > ![2](./img/idx_q02.png)
