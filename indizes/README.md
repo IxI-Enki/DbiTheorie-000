@@ -147,18 +147,102 @@
 
 ---
 # **Ⅱ** ) ***Quiz***
+<details>
+ <summary color="green"> click here to show Quesions </summary>
+ 
 - ### **1.)** Indexes müssen manuell erstellt werden und beschleunigen nur Abfragen. Stimmt das?
      - a) True
-     - b) False
-       > **Antwort**: b) False. Indexes werden auch automatisch erstellt, zB. für Primary Keys
+     - **b) False**
+       <details>
+         <summary color="orange"> click for Answer </summary>
+
+          **Antwort**: b) False. Indexes werden auch automatisch erstellt, zB. für Primary Keys
+       </details>
 
 - ### **2.)** Welche Index-Typen sind besonders effizient für Spalten mit wenigen Werten?
      - a) B-Tree
-     - b) Bitmap
-       > **Antwort**: b) Bitmap
+     - **b) Bitmap**
+       <details>
+         <summary color="orange"> click for Answer </summary>
+     
+          **Antwort**: b) Bitmap
+       </details>
 
 - ### **3.)** Wann sollte ein Index NICHT erstellt werden?
-     - a) Wenn die Tabelle viele Schreiboperationen hat.
+     - **a) Wenn die Tabelle viele Schreiboperationen hat.**
      - b) Wenn die Tabelle hauptsächlich gelesen wird.
-       > **Antwort**: a) Wenn die Tabelle viele Schreiboperationen hat
+       <details>
+          <summary color="orange"> click for Answer </summary>
+       
+          **Antwort**: a) Wenn die Tabelle viele Schreiboperationen hat
+       </details>
+</details>
+
 ---
+## **Ⅲ** ) <p align="center"> *Anwendungs-Beispiele* </p>
+
+### <p align="left"> **Grundsyntax** für `CREATE INDEX` </p>
+```sql
+CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
+    ON table_name                -- name der tabelle, für die der index erstellt wird 
+     ( column1, column2, ... )   -- spalten, auf denen der index basiert 
+;
+```
+
+#### <p align="left"> *1.)* B-Tree-Indizes </p>
+  > - Ideal für Gleichheitsabfragen (=), Bereichsabfragen (> , <) und Sortierungen
+  > - Gespeichert in einer B-Baum-Struktur für effiziente Suche, Einfügen und Löschen
+  ```sql
+  CREATE INDEX idx_emp_salary
+    ON employees
+       ( salary )
+  ;
+  ```
+
+#### <p align="left"> *2.)* Bitmap-Indizes </p>
+  > - Speichern Informationen über die Verteilung von Werten in einer Spalte in komprimierter Form
+  > - Effizient für Spalten mit wenigen verschiedenen Werten und Gleichheitsabfragen
+  ```sql
+  CREATE BITMAP INDEX idx_dept_no
+    ON departments
+       ( department_no )
+  ;
+  ```
+
+#### <p align="left"> *3.)* Funktionale Indizes </p>
+  > - Basieren auf einer Funktion, die auf einer oder mehreren Spalten angewendet wird
+  > - Ermöglichen das Indizieren von berechneten Werten oder komplexen Ausdrücken
+  ```sql
+  CREATE INDEX idx_emp_name_upper
+    ON employees
+       ( UPPER(name) )
+  ;
+  ```
+
+#### <p align="left"> *4.)* Reverse-Key-Indizes </p>
+  > - Speichern die Werte in umgekehrter Reihenfolge
+  > - Effizient für Bereichsabfragen mit großen Wertebereichen 
+  ```sql
+  CREATE INDEX idx_emp_hire_date_rev
+    ON employees
+       ( REVERSE(hire_date) )
+  ;
+  ```
+
+#### <p align="left"> *5.)* Weitere Parameter </p>
+  > - `TABLESPACE`: Gibt den Tablespace an, in dem der Index gespeichert werden soll
+  > - `PCTFREE`: Legt den Prozentsatz des freien Raums in jedem Block fest
+  > - `INITTRANS`: Bestimmt die Anzahl der Transaktionen, die gleichzeitig den Index aktualisieren können
+  > - `MAXTRANS`: Gibt die maximale Anzahl gleichzeitiger Transaktionen an
+  > - `STORAGE`: Definiert Speicheroptionen wie Blockgröße und Komprimierung
+  ```sql
+  CREATE INDEX idx_order_date_cust_id
+    ON orders
+       ( order_date, customer_id )
+    TABLESPACE idx_tbs
+    PCTFREE 10
+    INITTRANS 2
+    MAXTRANS 20
+  ;
+  ```
+
