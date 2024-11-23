@@ -115,28 +115,29 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
        >          INITTRANS 2
        >          MAXTRANS 20;
        >      ```
+
 ---
 ## **Ⅰ** ***d*** ) *Inserts und Constraints*
-  - ### ***Performance von Inserts mit Index***:
+  - ### ***Performance von `INSERT` mit Index***:
        - Bei jedem `INSERT` prüft die Datenbank, ob ein Datensatz mit dem gleichen `Primary Key` existiert
        - **Ohne** Index muss die **gesamte Tabelle durchsucht** werden
        - **Mit** Index erfolgt die Prüfung wesentlich **schneller**
          
   - ### ***Strategien für große Datenimporte***:
        - **Constraints deaktivieren**:
-         - Lade alle Daten ohne Überprüfung der Constraints
-         - Schalte die Constraints danach wieder ein
-         - *Dies ist effizienter, da nicht jede Zeile einzeln geprüft wird*
+         > - Lade alle Daten ohne Überprüfung der Constraints
+         > - Schalte die Constraints danach wieder ein
+         > - *Dies ist effizienter, da nicht jede Zeile einzeln geprüft wird*
            
        - **Index deaktivieren**:
-         - Lade die Daten in die Tabelle, ohne den Index zu aktualisieren
-         - Aktiviere den Index erst nach dem Laden
+         > - Lade die Daten in die Tabelle, ohne den Index zu aktualisieren
+         > - Aktiviere den Index erst nach dem Laden
 
 ---
 ## **Ⅰ** ***e*** ) *Updates und Indizes*
   - ### **Effekte von Indizes bei `UPDATE`**:
-       - Ein *Update auf einer indizierten Spalte muss sowohl die Tabelle als auch den Index aktualisieren*
-       - Schreiboperationen auf Spalten mit vielen Indizes sind daher langsamer
+       - Ein *`UPDATE` auf einer indizierten Spalte muss sowohl die Tabelle als auch den Index aktualisieren*
+       - ***Schreiboperationen*** auf Spalten mit vielen Indizes ***sind daher langsamer***
        - ***Indizes lohnen sich vor allem bei häufigen Leseoperationen***
          
   - ### **Taktik**:
@@ -145,30 +146,30 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
 ---
 ## **Ⅰ** ***f*** ) *Sortierung und Platz*
   - ### Sortierung in Tabellen:
-      - Ohne Index sind Tabellen unsortiert
+      - **Ohne Index** sind Tabellen **unsortiert**
       - Ein Index sorgt für eine logische Sortierung, physisch bleibt die Tabelle unsortiert
 
   - ### Speicherplatz und Fragmentierung:
        - Variablenlängenfelder (zB. `VARCHAR`) können mehr oder weniger Platz benötigen
-       - Lücken entstehen durch gelöschte oder geänderte Datensätze
+       - **Lücken** entstehen durch gelöschte oder geänderte Datensätze
        - Effiziente Nutzung des Speicherplatzes hängt von der Datenstruktur ab
 
 ---
 ## **Ⅰ** ***g*** ) *Abfrageoptimierung*
   - ### Effizienz durch Index Only Scan:
        - Manche Abfragen können direkt über den Index beantwortet werden, ohne auf die Tabelle zuzugreifen
-       - Beispiel: `COUNT(*)` auf einer indizierten Spalte
+       - *Beispiel*: `COUNT(*)` auf einer indizierten Spalte
 
   - ### Funktionsbasierte Indizes:
        - Nützlich bei Abfragen mit Funktionen wie `AVG(column)`:
-         ```sql
-         CREATE INDEX idx_abs_value ON table (AVG(column));
-         ```
+         > ```sql
+         > CREATE INDEX idx_abs_value ON table (AVG(column));
+         > ```
        - Verbessern die Performance bei komplexen Abfragen
          
   - ### Probleme durch Funktionen:
        - Funktionen wie `TO_NUMBER` verhindern die Nutzung eines Index
-         > **Lösung**: Einen funktionsbasierten Index erstellen oder die Abfrage umschreiben
+         > **Lösung**: Einen ***funktionsbasierten Index*** erstellen oder die Abfrage umschreiben
 
 ---
 ## **Ⅰ** ***h*** ) *Datenbanken ohne Indizes*
@@ -184,9 +185,9 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
   - ### 1. Update einer Tabelle mit einem Index:
        - Wenn auf eine indizierte Spalte zugegriffen wird, müssen auch alle Indizes aktualisiert werden
        - *Beispiel*:
-       ```sql
-       UPDATE employees SET lastname = 'Smithson' WHERE lastname = 'Smith';
-       ```
+         > ```sql
+         > UPDATE employees SET lastname = 'Smithson' WHERE lastname = 'Smith';
+         > ```
        
   - ### 2. Hinzufügen eines Index für seltene Abfragen:
        - Wenn eine Tabelle selten gelesen, aber oft beschrieben wird, ist die Abwägung wichtig
@@ -226,4 +227,3 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
        </details>
 
 ---
- 
