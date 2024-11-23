@@ -19,14 +19,13 @@
 ## **Ⅰ** ***a*** ) *Erstellen*:
     
   ```sql
-  create SEQUENCE                
-    allusers__u_ID        -- : name der sequenz
-      START with 1          -- : startwert
-      MAXvalue 100000       -- : maxwert
-      MINvalue 0            -- : minwert
-      INCREMENT by 1        -- : stepsize           
-      noCACHE               -- : erzeugt nummern bei bedarf  
-      noCYCLE               -- : keine wiederholung
+  create SEQUENCE allusers__u_ID   -- : name der sequenz
+      START with 1                 -- : startwert
+      MAXvalue 100000              -- : maxwert
+      MINvalue 0                   -- : minwert
+      INCREMENT by 1               -- : stepsize           
+      noCACHE                      -- : erzeugt nummern bei bedarf  
+      noCYCLE                      -- : keine wiederholung
   ;
   ```
     
@@ -38,20 +37,20 @@
 
 ---
 ## **Ⅰ** ***c*** ) *Wichtige* ***Parameter*** *und* ***Optionen***
-  - `INCREMENT by`:  
+  - ![increment](https://img.shields.io/badge/INCREMENT_by-%23030) :  
      Gibt die Schrittweite an  
      > Standardwert: 1 (auch negative Werte möglich)  
-  - `START with`:  
+  - ![start](https://img.shields.io/badge/START_with-%23050) :  
      Definiert den Startwert der Sequenz  
      > Standardwert:  *1 ⇾ aufsteigenden* Sequenzen    
      > Standardwert: *-1 ⇾ absteigenden* Sequenzen     
-  - `MINvalue / MAXvalue`:  
+  - ![min-max](https://img.shields.io/badge/MINvalue-MAXvalue-%23fff?labelColor=%23005&color=%23500) :  
      Legt die minimalen und maximalen Werte fest  
-    - `noMAXvalue`:  
-       > Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]     
-    - `noMINvalue`:  
+    - ![no-min](https://img.shields.io/badge/noMINvalue-%23fff?labelColor=%23005&color=%23002) :  
        > Mindestwert: *1 ⇾ aufsteigenden* Sequenzen   
-       > Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen       
+       > Mindestwert: *-10²⁶ ⇾ absteigende* Sequenzen
+    - ![no-max](https://img.shields.io/badge/noMAXvalue-%23fff?labelColor=%23500&color=%23200) :  
+       > Zähler läuft bis zum technischen Limit [10²⁷ - bei aufsteigenden Sequenzen]            
   - `CYCLE / noCYCLE`:  
     - `CYCLE`:  
        > Neustart ⇾ wenn Höchstwert erreicht   
