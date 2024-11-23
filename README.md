@@ -1,5 +1,5 @@
 > ###### <div align="center"> *`Datenbanken & Informationssysteme`* </div>
-### <div align="center" color="red"> ***Oracle*** *SQL* - ***THEORIE*** </div>
+### <div align="center" color="red"> ***Oracle*** *SQL* - ***Überblick*** </div>
 ---
 
 ### <sub><sub>✔️</sub></sub> <sub><sup color="green">●</sup></sub> Ⅰ ▻ [ Benutzer, Rollen & Rechte <sup><sub>👈🏼<sup color="red">click</sub><sub><sub color="orange">click</sub></sub></sub></sup></sub></sup> ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/users%2C%20rolls%20%26%20grants/README.md)  
