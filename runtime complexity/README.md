@@ -18,7 +18,14 @@
 # **Ⅰ** ) <p align="center"> ***Laufzeitkomplexität*** </p>
    - *beschreibt, wie lange ein eine SQL-Abfrage im Verhältnis zur Größe der Eingabedaten läuft*  
    - *Je schneller die Laufzeit im Verhältnis zur Eingabedatenmenge wächst, desto komplexer ist der Algorithmus*
-    
+
+<div align="center">
+   
+![komplexitätsklassen](./img/komplexitätsklassen.png)
+
+</div>
+
+---    
 ## **Ⅰ** ***a*** ) *Warum ist Laufzeitkomplexität wichtig?*
    - **Performance**:
      > Eine Abfrage mit hoher Laufzeitkomplexität kann bei großen Datenmengen sehr lange dauern oder zu einem Absturz führen
