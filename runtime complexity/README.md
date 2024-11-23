@@ -34,7 +34,7 @@
      > Langsame Abfragen verbrauchen mehr Serverressourcen (CPU, Speicher) und können andere Benutzer beeinträchtigen
 
 ---
-## **Ⅰ** ***b*** ) *Beispiele* für Laufzeitkomplexitäten:
+## **Ⅰ** ***b*** ) *Beispiele* der Laufzeitkomplexitäten:
    - ## 𝒪<sub>(1)</sub> :
        ***konstante Zeit/Komplexität***: die Laufzeit hängt nicht von der Datenmenge ab
        - ***Beispiel 1***:
