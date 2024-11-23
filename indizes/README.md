@@ -17,6 +17,11 @@
 >
 >  </details>
 
+<div align="right"> 
+
+   *Hier geht's zum* [`SQL-Index Quiz`](https://use-the-index-luke.com/de/3-minuten-test) 
+</div>
+
 <!-- INDIZES -->
 # **Ⅰ** ) <p align="center"> ***Indizes*** </p>
 
@@ -205,7 +210,7 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
        <details>
          <summary color="orange"> click for Answer </summary>
 
-          **Antwort**: b) False. Indexes werden auch automatisch erstellt, zB. für Primary Keys
+          > **Antwort**: b) False. Indexes werden auch automatisch erstellt, zB. für Primary Keys
        </details>
 
 - ### **2.)** Welche Index-Typen sind besonders effizient für Spalten mit wenigen Werten?
@@ -214,16 +219,25 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
        <details>
          <summary color="orange"> click for Answer </summary>
      
-          **Antwort**: b) Bitmap
+          > **Antwort**: b) Bitmap
        </details>
 
 - ### **3.)** Wann sollte ein Index NICHT erstellt werden?
      - **a) Wenn die Tabelle viele Schreiboperationen hat.**
      - b) Wenn die Tabelle hauptsächlich gelesen wird.
        <details>
-          <summary color="orange"> click for Answer </summary>
+         <summary color="orange"> click for Answer </summary>
        
-          **Antwort**: a) Wenn die Tabelle viele Schreiboperationen hat
+         > **Antwort**: a) Wenn die Tabelle viele Schreiboperationen hat
+       </details>
+
+- ### **4.)** Kann man eine View indizieren?
+     - **a) Nein**
+     - b) Ja
+       <details>
+         <summary color="orange"> click for Answer </summary>
+     
+         > **Antwort**: a) Nein, nur die darunterliegenden Tabellen
        </details>
 
 ---
