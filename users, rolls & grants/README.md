@@ -1,5 +1,5 @@
 ###### <div align="center"> Benutzer, Rollen & Berechtigungen </div>
->  <p align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 🖱️<sup><sub>click</sub></sup> </p>  
+>  <p align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 <!--🖱️<sup><sub>click</sub></sup> --> </p>  
 
 <!-- 
 > [!WARNING]
