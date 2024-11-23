@@ -29,7 +29,8 @@
       
   - ### *Beispiele*:
     - Ein `Primary Key` ***wird immer*** mit einem Index versehen
-    - Ein `Foreign Key` hingegen ***nicht*** *automatisch*, sollte jedoch manuell indiziert werden
+    - Ein `UNIQUE` Constraint ***wird ebenfalls automatisch*** indexiert
+    - Ein `Foreign Key` hingegen ***nicht*** *automatisch*, sollte jedoch manuell indexiert werden
 
 ---
 ## **Ⅰ** ***b*** ) Index: *Grundlagen und Analogien*
