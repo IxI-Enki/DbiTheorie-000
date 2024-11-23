@@ -1,4 +1,4 @@
-###### <div align="center"> Benutzer, Rollen & Berechtigungen </div>
+###### <div align="center"> Benutzer, Rollen, Berechtigungen & Synonyme </div>
 >  <p align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 <!--🖱️<sup><sub>click</sub></sup> --> </p>  
 
 <!-- 
@@ -79,3 +79,41 @@
 ```
 
 ---
+# **Ⅳ** ) <p align="center"> ***Synonyme*** </p>  
+  > - Synonyme sind Aliase für Objekte in der DB
+  > - Dieses Objekte können Tabellen, Views oder andere Synonyme sein
+  > - Diese Aliasa können anstelle der vollständigen Namen von Objekts verwenden werden
+
+- ***Vorteile von Synonymen***:
+  - **Vereinfachte Abfragen:** Komplexe oder lange Objektnamen können durch kürzere und aussagekräftigere Synonyme ersetzt werden
+  - **Datenunabhängigkeit:** Änderungen am ursprünglichen Objektnamen haben keinen Einfluss auf Abfragen, solange das Synonym verwendet wird
+  - **Zugriffsberechtigungen:** Synonyme können verwendet werden, um den Zugriff auf bestimmte Objekte zu kontrollieren (zB. öffentliche Synonyme für alle Benutzer)
+  - **Verdeckung komplexer Strukturen:** Hinter einem einfachen Synonym kann sich eine komplexe View oder eine Verbindung zu einer anderen Datenbank verbergen
+
+## **Ⅳ** ***a*** ) *Erstellen*:
+```sql
+CREATE
+  [PUBLIC]                  -- jeder benutzer in der datenbank auf das snonym zugreifen
+    SYNONYM synonym_name    -- name des synonyms
+      FOR object_name       -- vollständige name des objekts, auf das das synonym verweisen soll (inklusive schema)
+;
+```
+
+  > - *Beispiel:*
+  >   ```sql
+  >   CREATE PUBLIC SYNONYM alle_mitarbeiter FOR hr.employees;
+  >   ```
+  >   *Es wird ein öffentliches Synonym namens "alle_mitarbeiter" erstellt, das auf die Tabelle "employees" im Schema "hr" verweist*
+
+## **Ⅳ** ***b*** ) *Verwendung von Synonymen*:
+  - Synonyme werden in SQL-Anweisungen genauso verwendet wie die ursprünglichen Objektnamen:
+    ```sql
+    SELECT * FROM alle_mitarbeiter WHERE salary > 5000;
+    ```
+
+## **Ⅳ** ***c*** ) *Weitere Features und Überlegungen*:
+  * **Private Synonyme:** ohne `PUBLIC` ist das Synonym nur für einen selbst sichtbar
+  * **Synonyme für Objekte in anderen Schemata:** Synonyme können auch für Objekte in anderen Schemata erstellen, um den Zugriff zu vereinfachen
+  * **Synonyme für Datenbanklinks:** Synonyme können verwendet werden, um auf Objekte in anderen Datenbanken zuzugreifen
+  * **Synonyme und Performance:** Die Verwendung von Synonymen hat in der Regel keinen Einfluss auf die Performance der Abfragen
+
