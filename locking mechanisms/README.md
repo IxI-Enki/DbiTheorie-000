@@ -18,7 +18,7 @@
 
 <!-- TRANSAKTIONEN -->
 
-# **Ⅰ** ) ***Transaktionen***  
+# **Ⅰ** ) <p align="center"> ***Transaktionen*** </p>  
 <div align="center"> 
 
   Eine *Transaktion* ist eine **Folge von SQL-Anweisungen**, die **als Einheit behandelt** wird
