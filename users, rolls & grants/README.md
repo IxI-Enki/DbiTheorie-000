@@ -10,45 +10,35 @@
 
 <!-- BENUTZER  -->
 
-# **Ⅰ** ) 
-# <p align="center"> ***Benutzer*** </p>
+# **Ⅰ** ) <p align="center"> ***Benutzer*** </p>
 
 ## **Ⅰ** ***a*** ) *Erstellen*:
 ```sql
-  create USER                 -- CREATE statement
-      individualUser          -- User-Name: "individualUser"
+  create USER individualUser  -- User-Name: "individualUser"
       identified by userPw;   -- User-Passwort: "userPw"         
 ```
 
 ## **Ⅰ** ***b*** ) *Löschen*:
 ```sql
-  drop USER                   -- DROP statement
-      individualUser          -- User-Name: "individualUser"
+  drop USER individualUser    -- User-Name: "individualUser"
         cascade;              -- cascade - abhängige mitlöschen
 ```
 
 ---
 <!-- ROLLEN -->
-# **Ⅱ** )
-# <p align="center"> ***Rollen*** </p>
+# **Ⅱ** ) <p align="center"> ***Rollen*** </p>
 ## **Ⅱ** ***a*** ) *Erstellen*:
 ```sql
-  create ROLE                 -- CREATE statement  
-      specialRole;            -- Rollen-Name: "specialRole"
+  create ROLE specialRole;     -- Rollen-Name: "specialRole"
 ```
 ## **Ⅱ** ***b*** ) *Löschen*:
 ```sql
-  drop ROLE                   -- DROP statement
-      specialRole;            -- Rollen-Name: "specialRole"
+  drop ROLE specialRole;       -- Rollen-Name: "specialRole"
 ```
-<div align="right">
-  
-##### ROLLEN KÖNNEN IHRE BERECHTIGUNGEN NICHT WEITERGEBEN!
-</div>
+###### <p align="right"> Rollen können ihre Rechte nicht weitergeben </p>
 
 ---
-# **Ⅲ** )  
-# <p align="center"> ***Rechte*** </p> 
+# **Ⅲ** ) <p align="center"> ***Rechte*** </p> 
 ## **Ⅲ** ***a*** ) ***System***-*Privilegien vergeben*:
 ```sql
   grant 
@@ -59,6 +49,7 @@
       to individualSysUser    -- user dem die rechte gegeben werden
          with admin option;   -- bei Systemprivilegien wird die weitergabe damit erlaubt
 ```
+
 ## **Ⅲ** ***b*** ) ***Objekt***-*Privilegien vergeben*:
 ```sql
   grant 
@@ -69,6 +60,7 @@
       to individualClientUser     -- user (oder rolle) dem die rechte gegeben werden
         with grant option;        -- bei Objektprivilegien wird die weitergabe damit erlaubt
 ```
+
 > #### **Ⅲ** ***c*** ) *"grant ALL"*:
 > ```sql
 > grant 
