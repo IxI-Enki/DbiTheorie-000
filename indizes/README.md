@@ -198,9 +198,6 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
 
 ---
 # **Ⅱ** ) ***Quiz***
-<details>
- <summary color="green"> click here to show Quesions </summary>
- 
 - ### **1.)** Indexes müssen manuell erstellt werden und beschleunigen nur Abfragen. Stimmt das?
      - a) True
      - **b) False**
@@ -227,7 +224,6 @@ CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
        
           **Antwort**: a) Wenn die Tabelle viele Schreiboperationen hat
        </details>
-</details>
 
 ---
  
