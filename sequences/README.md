@@ -14,7 +14,7 @@
 
 <!-- SEQUENCES ERSTELLUNG -->
 
-# **Ⅰ** ) ***Sequenzen***
+# **Ⅰ** ) <p align="center"> ***Sequenzen*** </p>
 
 ## **Ⅰ** ***a*** ) *Erstellen*:
     
