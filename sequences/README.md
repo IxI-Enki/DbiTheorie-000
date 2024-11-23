@@ -37,7 +37,7 @@
   ```
 
 ---
-## **Ⅰ** **c*** ) *Wichtige* ***Parameter*** *und* ***Optionen***
+## **Ⅰ** ***c*** ) *Wichtige* ***Parameter*** *und* ***Optionen***
   - `INCREMENT by`:  
      Gibt die Schrittweite an  
      > Standardwert: 1 (auch negative Werte möglich)  
