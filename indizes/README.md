@@ -3,8 +3,19 @@
 > [!WARNING]
 > <details>  
 >  <summary align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 🖱️<sup><sub>click</sub></sup> </summary>  
-> 
-> </details>
+>
+> ![1](./img/idx_q01.png)
+> ![2](./img/idx_q02.png)
+> ![3](./img/idx_q03.png)
+> ![4](./img/idx_q04.png)
+> ![5](./img/idx_q05.png)
+> ![6](./img/idx_q06.png)
+> ![7](./img/idx_q07.png)
+> ![8](./img/idx_q08.png)
+> ![9](./img/idx_q09.png)
+> ![10](./img/idx_q10.png)
+>
+>  </details>
 
 <!-- INDIZES -->
 # **Ⅰ** ) 
