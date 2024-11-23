@@ -22,7 +22,6 @@
 <div align="center">
    
 ![komplexitätsklassen](./img/komplexitätsklassen.png)
-
 </div>
 
 ---    
