@@ -18,8 +18,7 @@
 >  </details>
 
 <!-- INDIZES -->
-# **Ⅰ** ) 
-# <p align="center"> ***Indizes*** </p>
+# **Ⅰ** ) <p align="center"> ***Indizes*** </p>
 
 ## **Ⅰ** ***a*** ) *Einführung*
   - ### **Indizes und Performance**:
@@ -47,23 +46,75 @@
 
 ---
 ## **Ⅰ** ***c*** ) *Index-Typen*
+### <p align="left"> **Grundsyntax** für `CREATE INDEX` </p>
+```sql
+CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
+    ON table_name                -- name der tabelle, für die der index erstellt wird 
+     ( column1, column2, ... );  -- spalten, auf denen der index basiert 
+```
+
 - ### 1) **B-Tree Index**:    
      - ***Standardindex*** mit binärer Suche
      - **Balanciert**, um gleich schnelle Zugriffe zu ermöglichen
+       > - Ideal für Gleichheitsabfragen (=), Bereichsabfragen (> , <) und Sortierungen
+       > - Gespeichert in einer B-Baum-Struktur für effiziente Suche, Einfügen und Löschen
+       ```sql
+       CREATE INDEX idx_emp_salary
+         ON employees
+            ( salary );
+       ```
          
 - ### 2) **Bitmap Index**:
      - Geeignet für Spalten ***mit wenigen unterschiedlichen Werten*** (zB. Geschlecht)
      - *Ein Index-Eintrag zeigt auf mehrere Zeilen*
-
+       > - Speichern Informationen über die Verteilung von Werten in einer Spalte in komprimierter Form
+       > - Effizient für Spalten mit wenigen verschiedenen Werten und Gleichheitsabfragen
+       ```sql
+       CREATE BITMAP INDEX idx_dept_no
+         ON departments
+            ( department_no );
+        ```
+       
 - ### 3) **Funktionsbasierter Index**:
      - Index auf einer ***berechneten Spalte oder Funktion*** (zB. `SUM(column)`)
-         
-- ### 4) **Clustered Index**:
-     - Physisch sortierte Tabellenstruktur, oft in index-organisierten Tabellen verwendet
-         
-- ###  5) **Bitmap Join Index**:
-     - Index einer Tabelle auf Spalten einer anderen Tabelle  (zB. zum Verknüpfen von Fremdschlüsseln)
+       > - Basieren auf einer Funktion, die auf einer oder mehreren Spalten angewendet wird
+       > - Ermöglichen das Indizieren von berechneten Werten oder komplexen Ausdrücken
+       ```sql
+       CREATE INDEX idx_emp_name_upper
+         ON employees
+            ( UPPER(name) );
+       ```
 
+       > - ### 4) **Clustered Index**:
+       >     - Physisch sortierte Tabellenstruktur, oft in index-organisierten Tabellen verwendet
+       >         
+       > - ###  5) **Bitmap Join Index**:
+       >     - Index einer Tabelle auf Spalten einer anderen Tabelle  (zB. zum Verknüpfen von Fremdschlüsseln)
+       > 
+       > - ### 6) **Reverse-Key-Indizes** </p>
+       >      - Speichern die Werte in umgekehrter Reihenfolge
+       >      - Effizient für Bereichsabfragen mit großen Wertebereichen 
+       >     ```sql
+       >     CREATE INDEX idx_emp_hire_date_rev
+       >       ON employees
+       >          ( REVERSE(hire_date) );
+       >     ```
+       >     
+       > - #### <p align="left"> 7) **Weitere Parameter** </p>
+       >      - `TABLESPACE`: Gibt den Tablespace an, in dem der Index gespeichert werden soll
+       >      - `PCTFREE`: Legt den Prozentsatz des freien Raums in jedem Block fest
+       >      - `INITTRANS`: Bestimmt die Anzahl der Transaktionen, die gleichzeitig den Index aktualisieren können
+       >      - `MAXTRANS`: Gibt die maximale Anzahl gleichzeitiger Transaktionen an
+       >      - `STORAGE`: Definiert Speicheroptionen wie Blockgröße und Komprimierung
+       >      ```sql
+       >      CREATE INDEX idx_order_date_cust_id
+       >        ON orders
+       >           ( order_date, customer_id )
+       >          TABLESPACE idx_tbs
+       >          PCTFREE 10
+       >          INITTRANS 2
+       >          MAXTRANS 20;
+       >      ```
 ---
 ## **Ⅰ** ***d*** ) *Inserts und Constraints*
   - ### ***Performance von Inserts mit Index***:
@@ -179,70 +230,4 @@
 </details>
 
 ---
-## **Ⅲ** ) <p align="center"> *Anwendungs-Beispiele* </p>
-
-### <p align="left"> **Grundsyntax** für `CREATE INDEX` </p>
-```sql
-CREATE INDEX index_name          -- eindeutiger name des zu erstellenden indexes
-    ON table_name                -- name der tabelle, für die der index erstellt wird 
-     ( column1, column2, ... )   -- spalten, auf denen der index basiert 
-;
-```
-
-#### <p align="left"> *1.)* B-Tree-Indizes </p>
-  > - Ideal für Gleichheitsabfragen (=), Bereichsabfragen (> , <) und Sortierungen
-  > - Gespeichert in einer B-Baum-Struktur für effiziente Suche, Einfügen und Löschen
-  ```sql
-  CREATE INDEX idx_emp_salary
-    ON employees
-       ( salary )
-  ;
-  ```
-
-#### <p align="left"> *2.)* Bitmap-Indizes </p>
-  > - Speichern Informationen über die Verteilung von Werten in einer Spalte in komprimierter Form
-  > - Effizient für Spalten mit wenigen verschiedenen Werten und Gleichheitsabfragen
-  ```sql
-  CREATE BITMAP INDEX idx_dept_no
-    ON departments
-       ( department_no )
-  ;
-  ```
-
-#### <p align="left"> *3.)* Funktionale Indizes </p>
-  > - Basieren auf einer Funktion, die auf einer oder mehreren Spalten angewendet wird
-  > - Ermöglichen das Indizieren von berechneten Werten oder komplexen Ausdrücken
-  ```sql
-  CREATE INDEX idx_emp_name_upper
-    ON employees
-       ( UPPER(name) )
-  ;
-  ```
-
-#### <p align="left"> *4.)* Reverse-Key-Indizes </p>
-  > - Speichern die Werte in umgekehrter Reihenfolge
-  > - Effizient für Bereichsabfragen mit großen Wertebereichen 
-  ```sql
-  CREATE INDEX idx_emp_hire_date_rev
-    ON employees
-       ( REVERSE(hire_date) )
-  ;
-  ```
-
-#### <p align="left"> *5.)* Weitere Parameter </p>
-  > - `TABLESPACE`: Gibt den Tablespace an, in dem der Index gespeichert werden soll
-  > - `PCTFREE`: Legt den Prozentsatz des freien Raums in jedem Block fest
-  > - `INITTRANS`: Bestimmt die Anzahl der Transaktionen, die gleichzeitig den Index aktualisieren können
-  > - `MAXTRANS`: Gibt die maximale Anzahl gleichzeitiger Transaktionen an
-  > - `STORAGE`: Definiert Speicheroptionen wie Blockgröße und Komprimierung
-  ```sql
-  CREATE INDEX idx_order_date_cust_id
-    ON orders
-       ( order_date, customer_id )
-    TABLESPACE idx_tbs
-    PCTFREE 10
-    INITTRANS 2
-    MAXTRANS 20
-  ;
-  ```
-
+ 
