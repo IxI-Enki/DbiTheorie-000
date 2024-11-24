@@ -53,10 +53,12 @@
 -->
 
 ## - *Beispiel*: als Hirarchiebenen von Angestellten & Vorgesetzten (mit Ebenen-Zähler)
-   > ( + View auf die Vornamen, um diese richtig (Case-sensitiv) auszugeben )
+   > - ( + View auf die Vornamen, um diese richtig (Case-sensitiv) auszugeben )
+
+ #### - Oracle-Query:
  
   ```sql
-  -- CTE:
+  --- CTE:
   with hirarchie_ebenen (  level_counter, empno, ename, mgr  ) as (
     select
         1 as level_counter
@@ -90,6 +92,7 @@
     hirarchie_ebenen l
     join casesensitivenames cm on (  cm.empno = l.mgr  )
     join casesensitivenames cc on (  cc.empno = l.empno  );
+
   ----------
   
   --- View der Namen
@@ -100,3 +103,11 @@
     from emp
     with read only constraint RO_on_casesensitivenames;
   ```
+
+#### - Ausgabe:
+
+
+
+
+
+
