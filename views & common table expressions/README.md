@@ -1,8 +1,7 @@
-<!-- readme -->
-
+<!--
 # Ⅰ Views
 
----
+-->
 # Ⅱ Common Table Expressions
 
 ## - die "klassische" CTE - recursive-Zählschleife:
@@ -52,6 +51,7 @@
   ```
 -->
 
+---
 ###### *Beispiel*: 
 ## - Hirarchiebenen von Angestellten & Vorgesetzten (mit Ebenen-Zähler)
    > View auf die Vornamen, um diese richtig (Case-sensitiv) auszugeben 
