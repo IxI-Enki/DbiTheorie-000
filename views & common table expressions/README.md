@@ -52,10 +52,13 @@
   ```
 -->
 
-## - *Beispiel*: als Hirarchiebenen von Angestellten & Vorgesetzten (mit Ebenen-Zähler)
-   > - ( + View auf die Vornamen, um diese richtig (Case-sensitiv) auszugeben )
+###### *Beispiel*: 
+## - Hirarchiebenen von Angestellten & Vorgesetzten (mit Ebenen-Zähler)
+   > View auf die Vornamen, um diese richtig (Case-sensitiv) auszugeben 
 
- #### - Oracle-Query:
+  - ***"Geben Sie alle Arbeiter unter 'BLAKE' aus, sowie den jeweiligen Vorgesetzten"***
+
+ #### - Query:
  
   ```sql
   --- CTE:
@@ -105,7 +108,7 @@
   ```
 
 #### - Ausgabe:
-
+![output_BLAKE](./img/output_BLAKE.png)
 
 
 
