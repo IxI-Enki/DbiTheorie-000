@@ -12,4 +12,4 @@
 
 ### <sub><sub>✔️</sub></sub> <sub><sup color="royalblue">●<sup></sub> Ⅴ ▻ [ Laufzeitkomplexität <sup><sub>👈🏼<sup color="red">click</sub><sub><sub color="orange">click</sub></sub></sub></sup></sub></sup> ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/runtime%20complexity/README.md)
 
-### ✔️<sub><sup color="blue">●</sup></sub> Ⅵ ▻ [ Views und Common-Table-Expressions <sup><sub>👈🏼<sup color="red">click</sub><sub><sub color="orange">click</sub></sub></sub></sup></sub></sup> ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/views%20%26%20common%20table%20expressions/README.md)
+### <sub><sub>✔️</sub></sub> <sub><sup color="blue">●</sup></sub> Ⅵ ▻ [ Views und Common-Table-Expressions <sup><sub>👈🏼<sup color="red">click</sub><sub><sub color="orange">click</sub></sub></sub></sup></sub></sup> ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/views%20%26%20common%20table%20expressions/README.md)
