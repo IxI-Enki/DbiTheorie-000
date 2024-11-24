@@ -1,5 +1,5 @@
 ###### <div align="center"> Laufzeitkomplexität </div>
-
+<!--
 > [!WARNING]
 > <details>
 >  <summary align="center"> 👉🏼 𝕿𝔬𝖕 𝕾𝔢𝖈𝔯𝖊𝔱 👈🏼 🖱️<sup><sub color="red">click</sub></sup> </summary>
@@ -7,6 +7,7 @@
 > .. nothing here yet ..
 >
 > </details>
+-->
 
 <!-- LAUFZEIT KOMPLEXITÄT -->
 
