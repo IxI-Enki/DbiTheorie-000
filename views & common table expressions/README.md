@@ -107,7 +107,7 @@
         join casesensitivenames ce on (  ce.empno = he.empno  );
     ```
 
-- ### *Ausgabe*:
+  - ### *Ausgabe*:
 
 <div  align="center"> 
   <img alt="outputImg" src="./img/output_BLAKE.png" width=80%>
