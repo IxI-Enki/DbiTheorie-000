@@ -25,7 +25,7 @@
 ##  <sub><sup color="cyan">●</sup></sub> Ⅲ ) <p align="center">[ <sup><sub><sup color="silver">click</sub><sub><sub color="grey">click</sub></sub></sub>👉🏼</sup></sub></sup> Sequenzen - generierte Folgen ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/sequences/README.md)</p> 
 
 <!-- <sub><sub>✔️</sub></sub> --> 
-##  <sub><sup color="teal">●</sup></sub> Ⅳ ) <p align="center">[ <sup><sub><sup color="silver">click</sub><sub><sub color="grey">click</sub></sub></sub>👉🏼</sup></sub></sup> Benutzer, Rollen, Synonyme & Rechte ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/users%2C%20rolls%20%26%20grants/README.md)</p> 
+##  <sub><sup color="teal">●</sup></sub> Ⅳ ) <p align="center">[ <sup><sub><sup color="silver">click</sub><sub><sub color="grey">click</sub></sub></sub>👉🏼</sup></sub></sup> Benutzer, Rollen, Synonyme & Rechte ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/users%2C%20roles%2C%20grants%20%26%20synonyms/README.md)</p> 
 
 <!-- <sub><sub>✔️</sub></sub> -->  
 ##  <sub><sup color="royalblue">●<sup></sub> Ⅴ ) <p align="center">[ <sup><sub><sup color="silver">click</sub><sub><sub color="grey">click</sub></sub></sub>👉🏼</sup></sub></sup> Views und Common-Table-Expressions ](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/views%20%26%20common%20table%20expressions/README.md)</p> 
