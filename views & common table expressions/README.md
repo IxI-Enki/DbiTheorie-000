@@ -120,7 +120,7 @@
     > [Angabe (.pdf von Moodle)](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/views%20%26%20common%20table%20expressions/dokumente-von-moodle/Angabe_Views_CTEs.pdf)  
   ---
 
-  - #### 1.) 
+  - #### 1a.) 
     ```sql
       create or replace view HF_INTERN as (
           select 
@@ -141,14 +141,15 @@
           -- select * from HF_INTERN;
       ```    
   ---
-  - #### 2.) 
+  - #### 1b.) 
       ```sql
       select * 
       from HF_INTERN
         where groesse > 15;
       ```
   ---
-  - #### 3.)
+  - #### 2.)
+  
       ```sql
 
       
