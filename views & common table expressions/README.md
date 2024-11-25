@@ -4,7 +4,9 @@
 
 # Ⅱ Common Table Expressions
 
-## - die "klassische" CTE - recursive-Zählschleife:
+## Ⅱ ) ***Reklursive CTEs***:
+
+- ### Die "klassische" recursive-Zählschleife:
   ```sql
   with num_row (  n  ) as (
       select                -- Anker-Query
@@ -53,11 +55,11 @@
 
 ---
 ##### *Beispiel*: 
-## - Hirarchiebenen von Angestellten & Vorgesetzten (mit Ebenen-Zähler)
+- ### Hirarchiebenen von Angestellten & Vorgesetzten (mit Ebenen-Zähler)
    > - ***"Geben Sie alle Arbeiter unter 'BLAKE' aus, sowie den jeweiligen Vorgesetzten"***
 
-- #### ***View ( auf die Vornamen )***:
-    > um diese richtig (case-sensitiv) auszugeben 
+  - #### ***View ( auf die Vornamen )***:
+      > um diese richtig (case-sensitiv) auszugeben 
     ```sql
     create or replace view casesensitivenames as
      select
@@ -67,7 +69,8 @@
        with read only constraint RO_on_casesensitivenames;
     ```
 
-- #### ***Query ( CTE )***:  
+  - #### ***Query ( CTE )***:  
+  
     ```sql
     with hirarchie_ebenen (  level_counter, empno, ename, mgr  ) as (
       select
@@ -102,12 +105,10 @@
       hirarchie_ebenen he
         join casesensitivenames cv on (  cv.empno = he.mgr  )
         join casesensitivenames ce on (  ce.empno = he.empno  );
-  ```
+    ```
 
-- ##### *Ausgabe*:
-![output_BLAKE](./img/output_BLAKE.png)
+- ### *Ausgabe*:
 
-
-
-
-
+<div  align="center"> 
+  <img alt="outputImg" src="./img/output_BLAKE.png" width=80%>
+</div>
