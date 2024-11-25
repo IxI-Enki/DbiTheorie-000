@@ -1,7 +1,7 @@
 <!--
 # Ⅰ Views
-
 -->
+
 # Ⅱ Common Table Expressions
 
 ## - die "klassische" CTE - recursive-Zählschleife:
@@ -52,62 +52,59 @@
 -->
 
 ---
-###### *Beispiel*: 
+##### *Beispiel*: 
 ## - Hirarchiebenen von Angestellten & Vorgesetzten (mit Ebenen-Zähler)
-   > View auf die Vornamen, um diese richtig (Case-sensitiv) auszugeben 
+   > - ***"Geben Sie alle Arbeiter unter 'BLAKE' aus, sowie den jeweiligen Vorgesetzten"***
 
-  - ***"Geben Sie alle Arbeiter unter 'BLAKE' aus, sowie den jeweiligen Vorgesetzten"***
+- #### ***View ( auf die Vornamen )***:
+    > um diese richtig (case-sensitiv) auszugeben 
+    ```sql
+    create or replace view casesensitivenames as
+     select
+         empno
+       , upper (  substr (  ename, 1, 1  ) ) || lower (  substr (  ename, 2  ) ) as names
+     from emp
+       with read only constraint RO_on_casesensitivenames;
+    ```
 
- #### - Query:
- 
-  ```sql
-  --- CTE:
-  with hirarchie_ebenen (  level_counter, empno, ename, mgr  ) as (
+- #### ***Query ( CTE )***:  
+    ```sql
+    with hirarchie_ebenen (  level_counter, empno, ename, mgr  ) as (
+      select
+          1 as level_counter
+        , empno
+        , ename
+        , mgr
+      from
+          emp
+      where ename = 'BLAKE'
+   
+      UNION all
+   
+      select
+          level_counter + 1 as level_counter
+        , e.empno
+        , e.ename
+        , e.mgr
+      from
+          hirarchie_ebenen h
+            join emp e on (  h.empno = e.mgr  )
+      where
+          h.level_counter is not null
+    )
     select
-        1 as level_counter
-      , empno
-      , ename
-      , mgr
+      he.level_counter as "Hirarchiebene"
+    , he.empno         as "Arbeiter-Nr"
+    , ce.names         as "Name"
+    , he.mgr           as "Vorgesetzten-Nr"
+    , cv.names         as "Vorgesetzten-Name" 
     from
-        emp
-    where
-        ename = 'BLAKE'
-    union
-    all
-    select
-        level_counter + 1 as level_counter
-      , e.empno
-      , e.ename
-      , e.mgr
-    from
-        hirarchie_ebenen l
-        join emp e on (  l.empno = e.mgr  )
-    where
-        l.level_counter is not null
-  )
-  select
-    l.level_counter as "Hirarchiebene"
-  , l.empno         as "Arbeiter-Nr"
-  , cc.names        as "Name"
-  , l.mgr           as "Vorgesetzten-Nr"
-  , cm.names        as "Vorgesetzten-Name" 
-  from
-    hirarchie_ebenen l
-    join casesensitivenames cm on (  cm.empno = l.mgr  )
-    join casesensitivenames cc on (  cc.empno = l.empno  );
-
-  ----------
-  
-  --- View der Namen
-  create or replace view casesensitivenames as
-    select
-        empno
-      , upper (  substr (  ename, 1, 1  ) ) || lower (  substr (  ename, 2  ) ) as names
-    from emp
-    with read only constraint RO_on_casesensitivenames;
+      hirarchie_ebenen he
+        join casesensitivenames cv on (  cv.empno = he.mgr  )
+        join casesensitivenames ce on (  ce.empno = he.empno  );
   ```
 
-#### - Ausgabe:
+- ##### *Ausgabe*:
 ![output_BLAKE](./img/output_BLAKE.png)
 
 
