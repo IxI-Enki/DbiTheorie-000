@@ -1,30 +1,7 @@
-- #### *Beispiele*:
-    > [Angabe (.pdf von Moodle)](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/views%20%26%20common%20table%20expressions/dokumente-von-moodle/Angabe_Views_CTEs.pdf)  
-  - ###### 1.) 
-  ```sql
-  create or replace view HF_INTERN as (
-      select 
-      * 
-      from FLAECHE
-        where HAUPTFLAECHE is null
-  )
-  with check option;
-      -- select * from HF_INTERN;
-  COMMIT;
-  
-  -- WILL work:
-  insert into HF_INTERN values (9, 'testflaeche 1', null, null, 10); 
-  -- WON'T work:
-  insert into HF_INTERN values (10, 'testflaeche 2', 3, null, 10); 
-
-  ROLLBACK;
-      -- select * from HF_INTERN;
-  ```
-
-<!-- 
+<!--  -->
 # Ⅰ Views
--->
 
+---
 # Ⅱ Common Table Expressions
 
 ## Ⅱ ) ***Reklursive CTEs***:
@@ -129,9 +106,50 @@
         join casesensitivenames cv on (  cv.empno = he.mgr  )
         join casesensitivenames ce on (  ce.empno = he.empno  );
     ```
-
   - ### *Ausgabe*:
 
 <div  align="center"> 
   <img alt="outputImg" src="./img/output_BLAKE.png" width=80%>
 </div>
+
+
+
+
+---
+- ## Weitere *Beispiele*:
+    > [Angabe (.pdf von Moodle)](https://github.com/IxI-Enki/DbiTheorie-000/blob/master/views%20%26%20common%20table%20expressions/dokumente-von-moodle/Angabe_Views_CTEs.pdf)  
+  ---
+
+  - #### 1.) 
+    ```sql
+      create or replace view HF_INTERN as (
+          select 
+          * 
+          from FLAECHE
+            where HAUPTFLAECHE is null
+      )
+      with check option;
+          -- select * from HF_INTERN;
+      COMMIT;
+  
+      -- WILL work:
+      insert into HF_INTERN values (9, 'testflaeche 1', null, null, 10); 
+      -- WON'T work:
+      insert into HF_INTERN values (10, 'testflaeche 2', 3, null, 10); 
+
+      ROLLBACK;
+          -- select * from HF_INTERN;
+      ```    
+  ---
+  - #### 2.) 
+      ```sql
+      select * 
+      from HF_INTERN
+        where groesse > 15;
+      ```
+  ---
+  - #### 3.)
+      ```sql
+
+      
+      ```
