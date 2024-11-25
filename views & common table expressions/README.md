@@ -1,10 +1,9 @@
 <!--  -->
-# Ⅰ Views
+###### <p align="center"> Views & Common Table Expressions </p>
 
----
-# Ⅱ Common Table Expressions
+# Ⅰ ) Common Table Expressions (*CTE*)
 
-## Ⅱ ) ***Reklursive CTEs***:
+## Ⅰ a ) ***Reklursive CTEs***:
 
 - ### Die "klassische" recursive-Zählschleife:
   ```sql
