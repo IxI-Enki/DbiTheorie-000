@@ -93,7 +93,7 @@
           h.level_counter is not null
     )
     select
-      he.level_counter as "Hirarchiebene"
+      he.level_counter as "H.Ebene"
     , he.empno         as "Arbeiter-Nr"
     , ce.names         as "Name"
     , he.mgr           as "Vorgesetzten-Nr"
