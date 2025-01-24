@@ -32,13 +32,14 @@
 # **Ⅱ** ) *Beispiele* von Laufzeitkomplexitäten
 
 <!--- ***konstante Zeit/Komplexität :***  *die Laufzeit hängt nicht von der Datenmenge ab* -->
-   - # <p color="#00AA49" align="left" >𝒪<sub>(1)</sub> :  ![Static Badge](https://img.shields.io/badge/konstante_Zeit%2FKomplexit%C3%A4t_%3A-_die_Laufzeit_h%C3%A4ngt_nicht_von_der_Datenmenge_ab-%23fff?style=for-the-badge&labelColor=%23042&color=%23021) </p>
-     - ***<p color="#00AA49"> Beispiel 1 : </p>***
+- # <p align="left"> $\Large\color{#00AA49}{𝒪}\tiny{(1)}$ :  ![Static Badge](https://img.shields.io/badge/konstante_Zeit%2FKomplexit%C3%A4t_%3A-_die_Laufzeit_h%C3%A4ngt_nicht_von_der_Datenmenge_ab-%23fff?style=for-the-badge&labelColor=%23042&color=%23021) </p>
+   
+   - $\Large\color{#00AA49}{ Beispiel\ 1\ :}$   
        > Eine Abfrage, die nur die erste Zeile einer Tabelle ausgibt
        > ```sql
        > SELECT * FROM customers WHERE customer_id = 123;
        > ```
-     - ***<p color="#00AA49"> Beispiel 2: </p>***
+   - $\Large\color{#00AA49}{ Beispiel\ 2\ :}$   
        > Zählen aller Zeilen in einer Tabelle mit einem Index auf der gesamten Tabelle
        > ```sql
        > SELECT COUNT(*) FROM customers;
