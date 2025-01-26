@@ -16,7 +16,7 @@
    - *Je schneller die Laufzeit im Verhältnis zur Eingabedatenmenge wächst, desto komplexer ist der Algorithmus*
 
 <div align="center">
-  <img src="./img/komplexitätsklassen.png" align="center" height="300" width="300"> 
+  <img src="./img/komplexitätsklassen.png" align="center" height="300" width="500"> 
 </div>
 
 ---    
