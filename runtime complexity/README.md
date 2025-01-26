@@ -77,7 +77,7 @@
      
 ---
 <!-- ***logarithmische Komplexität***: die Laufzeit wächst logarithmisch mit der Datenmenge -->       
-#  $\huge\color{#01EE33}{ 𝒪 }\scriptsize{(log n)}$ :  ![Static Badge](https://img.shields.io/badge/logarithmische_Komplexit%C3%A4t_%3A-_die_Laufzeit_w%C3%A4chst_logarithmisch_mit_der_Datenmenge-%23fff?style=for-the-badge&labelColor=%23095&color=%23053)
+#  $\huge\color{#01EE33}{ 𝒪 }\scriptsize{(log\ n)}$ :  ![Static Badge](https://img.shields.io/badge/logarithmische_Komplexit%C3%A4t_%3A-_die_Laufzeit_w%C3%A4chst_logarithmisch_mit_der_Datenmenge-%23fff?style=for-the-badge&labelColor=%23095&color=%23053)
    - $\Large\color{#01EE33}{ Beispiel 1 :}$  
      > Binäre Suche auf einem sortierten Index (vereinfacht)
      > ```sql
@@ -90,7 +90,7 @@
          
 ---
    <!-- ***superlineare Komplexität***: *liegt zwischen 𝒪(n) und 𝒪(n²)* -->       
-#  $\huge\color{#AAFF00}{ 𝒪 }\scriptsize{(n log n)}$ : ![Static Badge](https://img.shields.io/badge/superlineare_Komplexit%C3%A4t_%3A-_liegt_zwischen_%F0%9D%92%AA(n)_und_%F0%9D%92%AA(n%C2%B2)-%23fff?style=for-the-badge&labelColor=%239A2&color=%23481)
+#  $\huge\color{#AAFF00}{ 𝒪 }\scriptsize{(n\ log\ n)}$ : ![Static Badge](https://img.shields.io/badge/superlineare_Komplexit%C3%A4t_%3A-_liegt_zwischen_%F0%9D%92%AA(n)_und_%F0%9D%92%AA(n%C2%B2)-%23fff?style=for-the-badge&labelColor=%239A2&color=%23481)
    - $\Large\color{#AAFF00}{ Beispiel 1 :}$  
      > Optimierte Sortieralgorithmen wie Quicksort
      > ```sql
