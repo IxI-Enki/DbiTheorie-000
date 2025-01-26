@@ -100,7 +100,7 @@
 ---
 <!--- ***exponentielle Komplexität***: die Laufzeit verdoppelt sich, wenn die Datenmenge um eine Einheit größer wird -->        
 #  $\huge\color{#EE4400}{ 𝒪 }\scriptsize{(2^n)}$ : ![Static Badge](https://img.shields.io/badge/exponentielle_Komplexit%C3%A4t_%3A-_die_Laufzeit_verdoppelt_sich%2C_wenn_die_Datenmenge_um_eine_Einheit_gr%C3%B6%C3%9Fer_wird-%23fff?style=for-the-badge&labelColor=%23B10&color=%23610)
-   - $\Large\color{#AAFF00}{ Beispiel 1 :}$
+   - $\Large\color{#EE4400}{ Beispiel 1 :}$
      > Bilden aller Paare einer Menge, Türme von Hanoi als rekursiver Algorithmus
  
 ---
